@@ -10,7 +10,7 @@ bilibili公众号: 猫在大神旁的小C【https://space.bilibili.com/286378257
 from flask import Blueprint, render_template
 
 from App.forms import Register
-
+from App.models import user
 user = Blueprint("user",__name__)
 # 注册步骤
 """
@@ -28,5 +28,7 @@ user = Blueprint("user",__name__)
 def register():
 
     form = Register()
-    return render_template('user/register.html',form=form)
 
+    u= user()
+    print(type(u))
+    return render_template('user/register.html',form=form)

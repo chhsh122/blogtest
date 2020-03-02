@@ -23,19 +23,19 @@ class Config:
     MAIL_PASSWORD = "@@@@@@@@@@@@@@"
 # 开发环境
 class  DevelopmentConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root123@127.0.0.1:3306/modeng_blog'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:woshishen8@127.0.0.1:3306/modeng_blog'
     DEBUG = True
     TESTING = False
 
 # 测试环境
 class  TestingConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root123@127.0.0.1:3306/test_blog'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:woshishen8@127.0.0.1:3306/test_blog'
     DEBUG = True
     TESTING = True
 
 # 生产环境
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root123@127.0.0.1:3306/pro_blog'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:woshishen8@127.0.0.1:3306/pro_blog'
     DEBUG = False
     TESTING = False
 
